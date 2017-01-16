@@ -5,8 +5,8 @@ public class NumTest {
 		int[] nums={57,5,10,7,63,9};
 		sort(nums,1);
 		sort(nums,2);
-	}
-	
+	} 
+	  
 	private static void sort(int[] nums,int orderby){
 		//최댓값
 		int tmp=0;

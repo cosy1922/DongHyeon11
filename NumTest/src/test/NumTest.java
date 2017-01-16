@@ -10,14 +10,29 @@ public class NumTest {
 	private static void sort(int[] nums,int orderby){
 		//최댓값
 		int tmp=0;
+		int tmp1=0;
+		if(orderby==1){
 		for(int i=0; i<nums.length-1; i++){
 			for(int j=i+1; j<nums.length; j++){
 				if(nums[i]>nums[j]){
 					tmp=nums[i];
-				}else if(nums[i]<nums[j]){
-					tmp=nums[j];
+					nums[i]=nums[j];
+					nums[j]=tmp;
 				}
 			}
 		}System.out.println(tmp);
+		}else{//최솟값
+		
+			for(int i=0; i<nums.length-1; i++){
+			
+				for(int j=i+1; j<nums.length; j++){
+					if(nums[i]<nums[j]){
+						tmp1=nums[i];
+						nums[i]=nums[j];
+						nums[j]=tmp1;
+					}
+				}
+			}System.out.println(tmp1);
+		}
 	}
 }
